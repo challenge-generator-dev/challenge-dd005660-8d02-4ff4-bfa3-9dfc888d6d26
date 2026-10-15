@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Banking App - Aplicación de banca digital segura para gestionar tus finanzas" />
+    <meta name="keywords" content="banca digital, finanzas, transferencias, gestión de cuentas, banco online" />
+    <meta name="author" content="Banking Team" />
+    <meta name="theme-color" content="#1a73e8" />
+    <meta name="robots" content="index, follow" />
+    
+    <meta property="og:title" content="Banking App - Tu banco digital" />
+    <meta property="og:description" content="Gestiona tus finanzas de manera segura y eficiente con nuestra aplicación de banca digital." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://banking-app.example.com" />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:site_name" content="Banking App" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Banking App - Tu banco digital" />
+    <meta name="twitter:description" content="Gestiona tus finanzas de manera segura y eficiente." />
+    <meta name="twitter:image" content="/og-image.png" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <title>Banking App - Tu banco digital</title>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f5f5f5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .loading-screen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top-color: white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #1a73e8;
+        color: white;
+        padding: 8px 16px;
+        z-index: 100;
+        transition: top 0.3s;
+      }
+      
+      .skip-link:focus {
+        top: 0;
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <noscript>
+      <div style="padding: 20px; text-align: center; background: #ffebee; color: #c62828;">
+        <h1>JavaScript requerido</h1>
+        <p>Esta aplicación requiere JavaScript para funcionar. Por favor, habilita JavaScript en tu navegador.</p>
+      </div>
+    </noscript>
+    
+    <div id="root">
+      <div class="loading-screen">
+        <div class="loading-spinner" role="status" aria-label="Cargando aplicación"></div>
+        <p style="margin-top: 16px;">Cargando Banking App...</p>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
